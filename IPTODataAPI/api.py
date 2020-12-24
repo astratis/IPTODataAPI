@@ -39,22 +39,6 @@ class API:
         postfix = self._create_postfix(params)
         return self.base_url + '?' + postfix
 
-    def post(self, url, params):
-        """Posts to the url.
-
-        Parameters
-        ----------
-        url: str
-            url to POST
-        params: dict
-            params object to send along with the POST.
-
-        Returns
-        -------
-        requests.Response
-        """
-        return requests.post(url, params=params)
-
     def get_files(self):
         params = dict(dateStart=self.start_date, dateEnd=self.end_date, FileCategory=self.file_type)
         for key, value in dict(params).items():
