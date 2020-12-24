@@ -1,0 +1,5 @@
+pandas
+requests
+
+setuptools>=24.2.0
+pip>=9.0.0
