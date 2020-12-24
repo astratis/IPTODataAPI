@@ -7,9 +7,6 @@ from .api import *
 class DayAheadLoadForecast(API):
     def __init__(self, file_type='DayAheadLoadForecast', start_date=None, end_date=None):
         super(DayAheadLoadForecast, self).__init__(file_type, start_date, end_date)
-        # self.file_type = 'DayAheadLoadForecast'
-        # self.start_date = start_date
-        # self.end_date = end_date
 
     def main(self):
         files = self.get_files()
@@ -25,8 +22,3 @@ class DayAheadLoadForecast(API):
         data.index.name = 'Date'
         data.sort_values(by=['Date', 'Version'], inplace=True)
         return data
-
-
-if __name__ == '__main__':
-    df = DayAheadLoadForecast(start_date='2020-10-01', end_date='2020-10-02').main()
-    df.head()
