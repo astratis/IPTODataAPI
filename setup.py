@@ -13,8 +13,7 @@ setuptools.setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/astratis/IPTODataAPI",
-    packages=setuptools.find_packages(),
-    package_data={'IPTODataAPI': ['*']},
+    packages=['IPTODataAPI'],
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",

@@ -16,10 +16,10 @@ and can be extended by the <i>start_date</i> and <i>end_date</i> arguments in or
 All argument information can be found <a href="https://www.admie.gr/en/market/market-statistics/file-download-api">here</a>. 
 
 
-The module can be installed with:
+The module can be installed with the following cmd within the local repo directory:
 
 ```bash
-pip install IPTODataAPI
+pip install .
 ```
 
 <br>
@@ -36,10 +36,12 @@ Here is an example of a function that inherits the API functionality and extends
 Forecast data over the whole system and across the individual zones:
 
 ```python
+from IPTODataAPI import forecasts
+
 start_date = '2020-10-01'
 end_date = '2020-10-02'
 
-da_load_fcst = DayAheadLoadForecast(start_date=start_date, end_date=end_date).main()
+da_load_fcst = forecasts.DayAheadLoadForecast(start_date=start_date, end_date=end_date).main()
 
 da_load_fcst.head()
 ```

@@ -1,7 +1,7 @@
 import pandas as pd
 from datetime import timedelta
 
-from api import *
+from .api import *
 
 
 class DayAheadLoadForecast(API):
